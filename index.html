@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Social DashBoard</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+       <div class="container-fluid" id="wrapper">
+         <header>
+           <nav class="navbar navbar-default" id="header">
+            <!--<div class="container-fluid">-->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand white-text" href="#" id="logo_pic"><img src="images/fb_logo.png" height="30px" width="30px"></a>
+              <ul class="nav navbar-nav hidden-lg hidden-sm hidden-md">
+                <li class="head-nav hidden" ><span class="glyphicon glyphicon-user hshortcuts_sub" aria-hidden="true"><span class="badge request">10</span></span></li>
+                <li class="head-nav hidden" ><span class="glyphicon glyphicon-envelope hshortcuts_sub" aria-hidden="true"><span class="badge request">3</span></span></li>
+                <li class="head-nav hidden" ><span class="glyphicon glyphicon-globe hshortcuts_sub" aria-hidden="true"><span class="badge request">100</span></span></li>
+              </ul>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="input-group" id="search_div">
+                <input type="text" class="form-control" placeholder="Search Facebook" aria-describedby="basic-addon2"  id="search_bar">
+                <span class="input-group-addon" id="basic-addon2" style="width: 0px;" >
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </span>
+              </div >
+              <div class="hidden-sm hidden-lg hidden-md">
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation"><a href="#"  class="white-text">Create Page</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li role="presentation"><a href="#"  class="white-text">Create Group</a></li>
+                  <li role="presentation"><a href="#"  class="white-text">Yours Groups</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li role="presentation"><a href="#"  class="white-text">Activity Log</a></li>
+                  <li role="presentation"><a href="#"  class="white-text">Settings</a></li>
+                  <li role="presentation"><a href="#"  class="white-text">Log out</a></li>
+                </ul>
+              </div>
+              <div id="header_shortcuts">
+                <ul class="nav navbar-nav hidden-xs">
+                  <li class="shrt"><a href="#"><img src="images/u.jpg" class="profile_pic"></a></li>
+                  <li class="shrt"><a href="#" class="white-text">Umesh</a></li>
+                  <li class="shrt"><a href="#" class="white-text" class="hshortcuts_sub">Home</a></li>
+                  <li class="shrt"><a href="#" class="white-text" class="hshortcuts_sub">Find Friends</a></li>
+                  <li class="shrt"><a href="#" class="white-text" class="hshortcuts_sub"><span class="glyphicon glyphicon-user hshortcuts_sub" aria-hidden="true"><span class="badge request">10</span></span></li>
+                  <li class="head-nav shrt" ><span class="glyphicon glyphicon-envelope hshortcuts_sub" aria-hidden="true"><span class="badge request">3</span></span></li>
+                  <li class="head-nav shrt" ><span class="glyphicon glyphicon-globe hshortcuts_sub" aria-hidden="true"><span class="badge request">100</span></span></li>
+                  <li class="dropdown pull-right " id="drop">
+                    <a href="#" class="dropdown-toggle white-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+
+                    <ul class="dropdown-menu hidden-xs">
+                      <li><a href="#">Create Page</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Create Group</a></li>
+                      <li><a href="#">Yours Groups</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Activity Log</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li><a href="#">Log out</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- /.navbar-collapse -->
+
+           </nav>
+         </header>
+         <div class="row">
+           <div class="hidden-xs col-sm-4 col-md-3">
+             <div id="menu">
+               <ul class="nav nav-pills nav-stacked sidebar_spacing">
+                 <li role="presentation">
+                   <span>
+                     <img src="images/u.jpg" class="profile_pic">
+                     <p style="display:inline-block; color:black" class="list-heading">Umesh Samant</p>
+                   </span>
+                 </li>
+                 <li role="presentation" class="active">
+                   <span>
+                     <img src="images/news-feed1.png" class="icon">
+                     <a href="#" >News Feed</a>
+                     <span class="badge pull-right" id="active_link">. . .</span>
+                   </span>
+                 </li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/msg.png" class="icon">
+                     <a href="#">Messenger<span class="badge pull-right">3</span></a>
+                   </span>
+                 </li>
+               </ul>
+               <ul class="nav nav-pills nav-stacked sidebar_spacing">
+                 <li><p>Shortcuts</p></li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/ball.png" class="icon">
+                     <a href="#">8 Ball Pool</a>
+                   </span>
+                 </li>
+               </ul>
+               <ul class="nav nav-pills nav-stacked sidebar_spacing">
+                 <li><p>Explore</p></li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/group1.png" class="icon">
+                     <a href="#">Groups<span class="badge pull-right">10</span></a>
+                   </span>
+                 </li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/event.png" class="icon">
+                     <a href="#">Events</a>
+                   </span>
+                 </li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/pages.png" class="icon">
+                     <a href="#">Pages<span class="badge pull-right">5</span></a>
+                   </span>
+                 </li>
+                 <li role="presentation">
+                   <span>
+                     <img src="images/f2.png" class="icon">
+                     <a href="#">Friend Lists</a>
+                   </span>
+                 </li>
+                 <li role="presentation">
+                   <li><p>Create</p></li>
+                   <ul class="nav nav-pills submenu sidebar_spacing">
+                     <li role="presentation "><a href="#">Advert</a></li>
+                     <li role="presentation "><a href="#">Page</a></li>
+                     <li role=" presentation "><a href="# ">Group</a></li>
+                     <li role="presentation "><a href="# ">Event</a></li>
+                   </ul>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div class="col-xs-12 col-sm-8 col-md-6">
+             <div id="main">
+               <div class="panel panel-default">
+                 <div class="panel-heading">
+                   <span class="sub" style="border-right: 1px solid black">
+                     <i class="fa fa-pencil" aria-hidden="true"></i>
+                     <a href="#">Create a Post</a>
+                   </span>
+                   <span class="sub">
+                     <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                     <a href="#">Photo/Video Album</a>
+                   </span>
+                   <span class="sub">
+                     <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                     <a href="#">Live Video</a>
+                   </span>
+                 </div>
+                 <div class="panel-body">
+                   <span class="col-lg-1 col-xs-2" style="margin-top: 10px;"><a href="#"><img src="images/u.jpg" height="" width="32"></a></span>
+                   <span class="col-lg-11 col-xs-10"><textarea placeholder="Hi Umesh. Tell your friends about your day." rows="3" class="form-control"></textarea></span>
+                 </div>
+                 <div class="panel-footer" id="post1">
+                   <span class="sub1"><i class="fa fa-file-image-o" aria-hidden="true" style="color:rgb(138,191,76)"></i><a href="#" style="margin-left:2px;">Photo/Video</a></span>
+                   <span class="sub1"><i class="fa fa-smile-o" aria-hidden="true" style="color:rgb(246,195,57)"></i><a href="#" style="margin-left:2px;">Feeling Activity</a></span>
+                   <span class="sub1"><button type="btn-group" class="btn btn-default">POST</button></span>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                 <div class="panel-heading">
+                   <h3 class="panel-title post_heading">
+                     <span class="col-lg-1 col-xs-1">
+                       <a href="#"><img class="media-object post_image" src="images/indian.png" alt="..." style="display: inline-block;"></a>
+                     </span>
+                     <span class="col-lg-11 col-xs-8">
+                       <a href="#" style="color: blue: font-weight: bold; color: blue">Indian Express</a>
+                       <p class="post-time" > 10:00 PM</p>
+                     </span>
+                   </h3>
+                 </div>
+                 <div class="panel-body">
+                   <h3 class="text-post">'Do you want India's Prime Minister in your pocket', PM Modi asks NRIs in the Netherlands</h3>
+                   <span class="lsc"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+                   <span class="lsc"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+                   <span class="lsc"><i class="fa fa-share" aria-hidden="true"></i>Share</span>
+                 </div>
+                 <div class="panel-footer">
+                   <div class="media">
+                     <div class="c1">
+                       <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                       <div class="media-body">
+                         <p class="comment"><span><a href="#">Happy Joshi </a></span> Great PM!</p>
+                         <div>
+                           <small>
+                             <span><a href="#" class="sub5">Like </a></span>
+                             <span><a href="#" class="sub5"> Reply </a></span>
+                           </small>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="c1">
+                       <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                       <div class="media-body">
+                         <p class="comment"><span><a href="#">Saurav Thapa </a></span> India needs such politicians.</p>
+                         <div>
+                           <small>
+    	                        <span class="sub5"><a href="#">Like </a></span>
+                              <span class="sub5"><a href="#">Reply </a></span>
+                           </small>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="col-lg-1 col-md-1 col-xs-1" style="padding-left: 0;"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></div>
+                     <div class="col-lg-11 col-md-11 col-xs-11"><input placeholder="Write a comment..." class="form-control"></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="panel panel-default">
+                 <div class="panel-heading" style="padding: 25px 5px 50px 5px">
+                   <h3 class="panel-title">
+                     <span class="col-lg-1 col-xs-1"><a href="#"><img class="media-object post_image" src="images/h.jpg" alt="..." style="display: inline-block;"></a></span>
+                     <span class="col-lg-11 col-xs-11"><a href="#" style="color: blue: font-weight: bold; color: blue">Himanshu Samant</a></span>
+                     <p class="post-time" > 1:00 AM </p>
+                   </h3>
+                 </div>
+                 <div class="panel-body">
+                   <blockquote>
+                     <p>Information technology and business are becoming inextricably interwoven. I don't think anybody can talk meaningfully about one without the talking about the other.</p>
+                     <footer> Bill Gates</footer>
+                   </blockquote>
+                   <span class="lsc"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+                   <span class="lsc"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+                   <span class="lsc"><i class="fa fa-share" aria-hidden="true"></i>Share</span>
+                 </div>
+                 <div class="panel-footer">
+                   <div class="media">
+                     <div class="c1">
+                       <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                       <div class="media-body">
+                         <p class="comment"><span><a href="#">Sailesh Kalakoti </a></span> Awesome lines.</p>
+                        <div>
+                          <small>
+                            <span class="sub5"><a href="#">Like </a></span>
+                            <span class="sub5"><a href="#"> Reply </a></span>
+                          </small>
+                        </div>
+                       </div>
+                     </div>
+                     <div class="col-lg-1 col-md-1 col-xs-1" style="padding-left: 0;"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></div>
+                     <div class="col-lg-11 col-md-11 col-xs-11"><input placeholder="Write a comment..." class="form-control"></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="panel panel-default">
+                 <div class="panel-heading post_heading">
+                   <h3 class="panel-title">
+                     <span><a href="#"><img class="media-object post_image" src="images/sarcasm.png" alt="..." ></a></span>
+                     <span><a href="#" style="color: blue: font-weight: bold; color: blue">Sarcasm</a> <p style="display: inline-block; color: grey;">added a new photo</p></span>
+                     <p class="post-time" > 11:00 AM</p>
+                   </h3>
+                 </div>
+                  <div class="panel-body image-post">
+                   <img src="images/p4.jpg" class="img-responsive" alt="Responsive image"><hr>
+                   <span class="lsc"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+                   <span class="lsc"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+                   <span class="lsc"><i class="fa fa-share" aria-hidden="true"></i>Share</span>
+                  </div>
+                  <div class="panel-footer">
+                    <div class="media">
+                      <div class="c1">
+                        <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                        <div class="media-body">
+                          <p class="comment"><span><a href="#">Rahul Pokhariya </a></span> Yaa true one..haha</p>
+                          <div>
+                            <small>
+    	                         <span class="sub5"><a href="#">Like </a></span>
+                               <span class="sub5"><a href="#">Reply </a></span>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c1">
+                        <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                        <div class="media-body">
+                          <p class="comment"><span><a href="#">Divyesh Sharma </a></span> haha I have done this once.</p>
+                          <div>
+                            <small>
+    	                         <span class="sub5"><a href="#">Like </a></span>
+                               <span class="sub5"><a href="#">Reply </a></span>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-1 col-md-1 col-xs-1" style="padding-left: 0;"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></div>
+                      <div class="col-lg-11 col-md-11 col-xs-11"><input placeholder="Write a comment..." class="form-control"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading post_heading">
+                    <h3 class="panel-title">
+                      <span><a href="#"><img class="media-object post_image " src="images/aajtak.png" alt="not available"></a></span>
+                      <span><a href="#" style="color: blue: font-weight: bold; color: blue">Aaj Tak</a> <p style="display: inline-block; color: grey;">added a new video</p></span>
+                      <p class="post-time" >5:00 AM</p>
+                    </h3>
+                  </div>
+                  <div class="panel-body image-post">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9 embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tLTZ4RiSRmQ" allowfullscreen></iframe>
+                    </div><hr>
+                    <span class="lsc"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+                    <span class="lsc"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+                    <span class="lsc"><i class="fa fa-share" aria-hidden="true"></i>Share</span>
+                  </div>
+                  <div class="panel-footer">
+                    <div class="media">
+                      <div class="c1">
+                        <div class="media-left"><a href="#"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></a></div>
+                        <div class="media-body">
+                          <p class="comment">
+                            <span><a href="#">Anil </a></span> Bihar rockzzz once again haha.</p>
+                            <div>
+                              <small>
+                                <span class="sub5"><a href="#">Like </a></span>
+                                <span class="sub5"><a href="#">Reply </a></span>
+                              </small>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-1 col-md-1 col-xs-1" style="padding-left: 0;"><img class="media-object" src="http://via.placeholder.com/32x32" alt="..."></div>
+                      <div class="col-lg-11 col-md-11 col-xs-11"><input placeholder="Write a comment..." class="form-control"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-3">
+              <div id="sidebar">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <i class="fa fa-birthday-cake" aria-hidden="true" style="color:red"></i>
+                    <a href="#">Rahul Bastiyal </a><span> 's birthday is today</span>
+                  </div>
+                </div>
+                <div id="trending_news">
+                <!-- Nav tabs -->
+                  <div style="position: fixed; z-index: 1; background-color: #f6f7f9; width: 19%;">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li style="color:solid black; font-size:16px; padding: 10px; "> Trending</li>
+                      <li role="presentation" class="active"><a href="#trending" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i></a></li>
+                      <li role="presentation"><a href="#politics" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                      <li role="presentation"><a href="#sports" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-life-ring" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                <!-- Tab panes -->
+                  <div class="tab-content" id="trending_body">
+                    <div role="tabpanel" class="tab-pane active" id="#trending">
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#"> Lionel Messi</a></h5>
+                        Lionel Messi marries Antonella Roccuzzo as teammates past and present turn… ‑ <a href="#" class="trending_links">msn.com</a>
+                      </p>
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#"> Xi Jinping</a></h5>
+                        China's Xi says there's no tolerance for subversion in Hong Kong ‑ <a href="#" class="trending_links">foxnews.com</a>
+                      </p>
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Bronx-Lebanon Hospital Center</a></h5>
+                        NYPD: Bronx hospital shooter, 1 victim dead ‑ <a href="#">a.msn.com</a>
+                      </p>
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Goods and Services Tax</a></h5>
+                        As India enters GST era, small traders are hopeful, yet anxious ‑ <a href="#" class="trending_links">in.news.yahoo.com</a>
+                      </p>
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Facebook</a></h5>
+                        Facebook changes algorithm to curb 'tiny group' of spammers ‑ <a href="#" class="trending_links">deccanchronicle.com</a>
+                      </p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="politics">
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Xi Jinping</a></h5>
+                        China's Xi says there's no tolerance for subversion in Hong Kong ‑ <a href="#" class="trending_links">foxnews.com</a>
+                      </p>
+                      <p>
+                          <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Hizbul Mujahideen</a></h5>
+                          Hizbul Mujahideen chief Syed Salahuddin vows to fight on <a href="#" class="trending_links">‑ indianexpress.com</a>
+                      </p>
+                      <p>
+                          <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Goods and Services Tax</a></h5>
+                          As India enters GST era, small traders are hopeful, yet anxious<a href="#" class="trending_links">in.news.yahoo.com</a>
+                      </p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="sports">
+                      <p>
+                        <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Jeff Horn vs. Manny Pacquiao</a></h5>
+                        Manny Pacquiao beaten by Horn in one of boxing's greatest upsets <a href="#" class="trending_links">‑ theguardian.com</a>
+                      </p>
+                      <p>
+                          <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">Sri Lanka vs. Zimbabwe</a></h5>
+                          Live Cricket Score - Sri Lanka vs Zimbabwe, 2nd ODI <a href="#" class="trending_links">‑cricbuzz.com</a>
+                      </p>
+                      <p>
+                          <h5><i class="fa fa-line-chart" aria-hidden="true"></i><a href="#">India vs. Pakistan</a></h5>
+                          India vs Pakistan, ICC Women’s World Cup, live cricket score<a href="#" class="trending_links">‑ hindustantimes.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <footer>
+          <ul class="nav nav-pills " id="footer">
+            <li role="presentation "><a href="#">About Us</a></li>
+            <li role="presentation "><a href="#">Home</a></li>
+            <li role=" presentation "><a href="#">Privacy</a></li>
+            <li role="presentation "><a href="#">Advertising</a></li>
+          </ul>
+        </footer>
+      </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
